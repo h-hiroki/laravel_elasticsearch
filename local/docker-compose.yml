@@ -44,7 +44,7 @@ services:
 
 
   elasticsearch:
-    image: elasticsearch:7.3.2
+    build: ./elasticsearch
     volumes:
       - es-data:/usr/share/elasticsearch/data
     environment:
