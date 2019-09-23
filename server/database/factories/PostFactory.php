@@ -9,9 +9,9 @@ use Faker\Generator as Faker;
 
 $factory->define(Post::class, function (Faker $faker) {
     return [
-        'title' => $faker->text,
+        'title' => $faker->realText,
         'user_id' => factory(User::class)->create()->id,
-        'content' => $faker->text,
+        'content' => $faker->realText,
         'is_public' => $faker->boolean,
     ];
 });
