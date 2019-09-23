@@ -143,6 +143,14 @@ class ElasticsearchEngine extends Engine
     }
 
     /**
+     * TODO 用途確認すること。
+     */
+    public function flush($model)
+    {
+        //
+    }
+
+    /**
      * Get the total count from a raw result returned by the engine.
      *
      * @param  mixed $results
