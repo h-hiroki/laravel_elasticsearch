@@ -94,15 +94,16 @@ class ElasticsearchEngine extends Engine
      */
     public function paginate(Builder $builder, $perPage, $page)
     {
-        $result = $this->performSearch($builder, [
-            'filters' => $this->filters($builder),
-            'from'    => (($page * $perPage) - $perPage),
-            'limit'   => $perPage,
-        ]);
+        // TODO うまく動かせなかったので標準を利用する
+        // $result = $this->performSearch($builder, [
+        //     'filters' => $this->filters($builder),
+        //     'from'    => (($page * $perPage) - $perPage),
+        //     'limit'   => $perPage,
+        // ]);
 
-        $result['nbPages'] = $result['hits']['total'] / $perPage;
+        // $result['nbPages'] = $result['hits']['total'] / $perPage;
 
-        return $result;
+        // return $result;
     }
 
     /**

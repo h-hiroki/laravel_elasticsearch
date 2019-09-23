@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/post/search', function () {
+
+    return App\Models\Post::search(\request('q'))->get();
+    // TODO paginationで取得したかったけどうまく行かないのでとりあえずgetで取得
+    // return App\Models\Post::search(\request('q'))->paginate();
+});
